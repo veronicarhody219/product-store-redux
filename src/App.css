@@ -1,0 +1,253 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* App.css */
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #0c531d;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+.nav {
+  position: fixed; /* Cố định vị trí */
+  top: 0; /* Gắn vào đỉnh trang */
+  left: 0; /* Bắt đầu từ cạnh trái */
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  z-index: 10; /* Đảm bảo luôn ở trên các phần tử khác */
+  /* background-color: white; Đặt màu nền (nếu cần) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng (nếu cần) */
+  padding: 10px 20px; /* Khoảng cách bên trong Navbar */
+}
+
+nav a {
+  /* margin-top: 60px; */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+.content {
+  margin-top: 60px;
+}
+/* Product List Section */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  list-style-type: none;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product-card p {
+  color: #555;
+}
+
+.product-card button,
+.product-card Link {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #218838;
+}
+
+/* Cart Page */
+.cart {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.cart h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart ul li:last-child {
+  border-bottom: none;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  position: fixed; /* Cố định vị trí */
+  top: 0; /* Gắn vào đỉnh trang */
+  right: 0; /* Bắt đầu từ cạnh trái */
+
+  z-index: 100; /* Đảm bảo luôn ở trên các phần tử khác */
+}
+
+.theme-toggle-btn:hover {
+  background-color: #444;
+}
+/* Styling the Cart */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.cart-item button,
+.btn {
+  background-color: #218838;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #073410;
+}
+
+.cart-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+/* styling search  */
+.search-filters {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.search-filters input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.price-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price-filter label {
+  font-size: 14px;
+}
+
+.price-filter input[type="number"] {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
