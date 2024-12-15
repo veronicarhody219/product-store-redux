@@ -70,7 +70,9 @@ const ProductList = () => {
             >
               Add to Cart
             </button>
-            <Link to={`/products/${product.id}`}>View Detail</Link>
+            <Link to={`/products/${product.id}`}>
+              <button>View Detail</button>
+            </Link>
           </li>
         ))}
       </ul>

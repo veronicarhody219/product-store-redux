@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
 .App-logo {
@@ -65,7 +66,7 @@ nav {
   padding: 1rem;
   text-align: center;
 }
-.nav {
+nav {
   position: fixed; /* Cố định vị trí */
   top: 0; /* Gắn vào đỉnh trang */
   left: 0; /* Bắt đầu từ cạnh trái */
@@ -137,11 +138,12 @@ nav a:hover {
 .product-card Link {
   background-color: #28a745;
   color: #fff;
-  padding: 10px;
+  padding: 8px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 5px;
 }
 
 .product-card button:hover {

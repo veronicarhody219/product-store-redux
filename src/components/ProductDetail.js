@@ -16,7 +16,10 @@ const ProductDetail = () => {
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <p>{product.price}</p>
-      <button onClick={() => dispatch(addToCart({ ...product, quantity: 1 }))}>
+      <button
+        onClick={() => dispatch(addToCart({ ...product, quantity: 1 }))}
+        className="btn"
+      >
         Add to Cart
       </button>
     </div>
